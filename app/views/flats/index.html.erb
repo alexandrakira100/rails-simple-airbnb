@@ -1,0 +1,9 @@
+<% @flats.each do |flat| %>
+Name: <li> <%= link_to flat.name, flat_path(flat) %></li>
+<p>Address: <%= flat.address %></p>
+<p>Price: <%= flat.price_per_night %></p>
+<p>Number of guests: <%= flat.number_of_guests %></p>
+<% end %>
+
+<%= link_to "Add new flat", new_flat_path,  class: "btn btn-primary" %>
+
